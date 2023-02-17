@@ -1,0 +1,65 @@
+<!-- Inherits from base template -->
+{% extends "base.html" %}
+
+<!-- Page title -->
+{% block title %}ResNote{% endblock %}
+
+
+{% block content %}
+
+  <div id="navlist" class="navbar w-nav" style="transform: translateX(0px) translateY(0px) translateZ(0px); transform-style: preserve-3d; transition: transform 360ms ease 0s;">
+
+    <a href="#"><img src="lg.png"  width="200px" alt=""></a>
+    <div class="topnav-right">
+        <a href="#">Early Access</a>
+    </div>
+
+    <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-1"></div>
+  </div>
+
+
+  <section class="sec1">
+    <img src="{{url_for('static', filename='images/logo4.png')}}" class="img1" alt="">
+    <img src="{{url_for('static', filename='images/frnds.png')}}" class='img2' alt="">
+    <h2>Definitely not a dating app anymore.</h2>
+    <button class="btn">Sign up for early access</button>
+    <img alt="resume icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHnSURBVHgB7dzZjRpBFIbRPwSHUCE4BEJwBnQmdAgOYTIhBIdACISAKY2QHzxo6IWlinOk+wy3PrG0UJMAAAAAAAAAAAAAAAAAAAAAAADAe9ucZ3+e43lO5/lznm36t8vnrnXnuns9g+72rkuerkxd/kf6U3e6hP1qdunEkOtL9hr5u7iX2aQD9S3plNsil7Sv5La4dfbpwGnCHNJ25JLPHW7d95gOXL5U9R65ZFrcyzRvn+lLtxa5ZF7cfTqwyfTFW4pcMi9unW06MabPyCXz447pzJi+IpeI+58xfUQuEfeqMW1HLhH3W2PmR/6Z56mPPfWy7+3iXoyZd1D1gJ8RWdwZhrQReUncIW9uyGtHFncFQ+ZH/pX72UTc1QyZd5B1tlnfdsHzGcKXNpn/ilkz8ty4x3TyG+89LfnMWyPykrjPvIRryrMii/tASyLvMt0u4j5cPbhD7h95btxDxF2s5L6Rl8QtYRUl94ks7gspWTeyuC+oZJ3I4r6wkmWRxW1AyfzI4jai5DGRxX2ikvtGFvcFlNx+L9CU6eVeqS7cejfflLg93tLatLUii/vClkYWtwE10D7T4+4jblM+cnvcj9Ckj4jbvd8Rt3tD/n0ud/tXRgAAAAAAAAAAAAAAAAAAAAAAANCKv/gksbXkvvpDAAAAAElFTkSuQmCC"
+        class="arw">
+  </section>
+  <div class="sec2 sec">
+    <h1>Meet like minded people in-person.</h1>
+    <p> We just find the best person for you without judging based on photos.</p>
+  </div>
+  <div class="sec2 sec">
+    <h1>Apps are boring, meeting people is exciting.</h1>
+    <p> Covid is gone. So, why waste your time trying to find new people in Insta, Tinder, Bumble etc.</p>
+  </div>
+  <div class="sec2 sec">
+    <h1>Best person for you is someone who shares similar thoughts as you.</h1>
+    <p> We have an evolving AI that's working all the time to get you a new friend'.</p>
+  </div>
+  <div class="sec2 sec">
+    <h1>How you match</h1>
+    <p> Don't tell us what you are looking for and don't share your photos publicly. Just tell us about your
+        interests and our unique compatibity algorithm will show you those who share your values and interests.</p>
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      scroll()
+    };
+  
+    function scroll() {
+      if (document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20) {
+        document.getElementById("navlist").style.top = "0";
+      }
+      else {
+        document.getElementById("navlist").style.top
+          = "-60px";
+      }
+    }
+  </script>
+
+{% endblock %}
